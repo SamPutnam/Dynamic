@@ -80,13 +80,14 @@ $(document).ready(function () {
 	    }   
         var currVal = (currVal !=null) ? currVal : "";
 	console.log(item)
-	if ((item == "country") || (item == "age")) {    
+	console.log(currVal)
 	$(".dynamic:contains('{{"+item+"}}')").each(function() {
-	    console.log(currVal)	
+	    console.log(currVal)
+	    console.log(item)
             var replace_text = currVal
 	    var replaced = $(this).html().replace(regex, replace_text);
 	    $(this).html(replaced);
-	})};
+	});
     });
 });	
 </script>
