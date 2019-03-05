@@ -80,7 +80,8 @@ $(document).ready(function () {
 	var currValc = localStorage.getItem("country").toLowerCase();    
 	    }
 	if ((item == "qualifier") && (localStorage.getItem("age")) !="") {
-	var currValc = "if you're over";    
+	var currValc = "if you're over";
+	console.log(localStorage.getItem("age"))
 	    }    
         var currValc = (currValc !=null) ? currValc : "";
 	console.log(item)
