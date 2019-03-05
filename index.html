@@ -61,7 +61,7 @@ $(document).ready(function () {
 </script>
 <script>
 $(document).ready(function () {
-    var demo = ["country", "age"];
+    var demo = ["country", "age", "countrylow"];
     var set = false;
     $.each(demo,function (index, item) {
         var regex = new RegExp("\\{\\{"+item+"\\}\\}","g");
@@ -82,7 +82,7 @@ $(document).ready(function () {
         var countrylow = localStorage.getItem(item).toLowerCase();
 	console.log(countrylow)
 	console.log(item)
-	item = "country"
+	item = "countrylow"
 	console.log(item)
 	$(".dynamic:contains('{{"+item+"}}')").each(function() {
             console.log(countrylow)
