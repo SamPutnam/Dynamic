@@ -79,7 +79,7 @@ $(document).ready(function () {
 	console.log(set)
         if (set == false) {
         set = true;
-        demo[2] = localStorage.getItem(item).toLowerCase();
+        var countrylow = localStorage.getItem(item).toLowerCase();
 	console.log(demo)
         }
         var currVal = (currVal !=null) ? currVal : "";
