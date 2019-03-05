@@ -27,10 +27,12 @@ $(document).ready(function () {
 	}		
         var currVala = localStorage.getItem(item);
         var currVala = (currVala !=null) ? currVala : "finances";
+	console.log(currVala);    
         var src1= "https://raw.githubusercontent.com/SamPutnam/Index-2019/master/";
         var src3= ".png";	
 	var bth = src1.concat(currVala);
         var fll = bth.concat(src3);
+	console.log(fll);
         var input = document.getElementById(item);
         input.src = fll;
     });
