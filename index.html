@@ -73,8 +73,9 @@ $(document).ready(function () {
 	    var valueFound = url.substr(url.indexOf(keyToFind + '=') + keyToFind.length + 1).split('&')[0];
 	    localStorage.setItem(keyToFind, valueFound);
 	}		
-        var currVal = localStorage.getItem(item);    
-	if item == countrylow{
+        var currVal = localStorage.getItem(item);
+	console.log(item)
+	if item == countrylow {
 	var currVal = localStorage.getItem(country).toLowerCase();    
 	}
 	<!--    
