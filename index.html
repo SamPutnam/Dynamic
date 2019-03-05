@@ -82,8 +82,9 @@ $(document).ready(function () {
         set = true;
         var countrylow = localStorage.getItem(item).toLowerCase();
 	console.log(countrylow)
+	item = "countrylow"
 	console.log(item)
-	$(".dynamic:contains('{{"+"countrylow"+"}}')").each(function() {
+	$(".dynamic:contains('{{"+item+"}}')").each(function() {
             var replace_text = currVal
 	    var replaced = $(this).html().replace(regex, replace_text);
 	    $(this).html(replaced);	
