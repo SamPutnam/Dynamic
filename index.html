@@ -91,6 +91,7 @@ $(document).ready(function () {
         });
 	};	
         var currVal = (currVal !=null) ? currVal : "";
+	console.log(item)
 	$(".dynamic:contains('{{"+item+"}}')").each(function() {
 	    console.log(currVal)	
             var replace_text = currVal
