@@ -85,7 +85,7 @@ $(document).ready(function () {
             var replace_text = currVal
 	    var replaced = $(this).html().replace(regex, replace_text);
 	    $(this).html(replaced);	
-        }
+        });
         var currVal = (currVal !=null) ? currVal : "";
 	$(".dynamic:contains('{{"+item+"}}')").each(function() {
             var replace_text = currVal
