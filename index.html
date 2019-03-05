@@ -62,7 +62,7 @@ $(document).ready(function () {
 </script>
 <script>
 $(document).ready(function () {
-    var demo = ["country", "countrylow", "age"];
+    var demo = ["country", "age", "countrylow"];
     var set = false;
     $.each(demo,function (index, item) {
         var regex = new RegExp("\\{\\{"+item+"\\}\\}","g");
@@ -76,7 +76,7 @@ $(document).ready(function () {
 	}		
         var currVal = localStorage.getItem(item);
 	console.log(item)
-	if ((item == "countrylow") && (currVal !=null)) {
+	if (item == "countrylow") {
 	var currVal = localStorage.getItem("country").toLowerCase();    
 	    }   
         var currVal = (currVal !=null) ? currVal : "";
