@@ -16,7 +16,7 @@
 <script>
 $(document).ready(function () {
     var image = ["image"];
-    $.each(names,function (index, item) {
+    $.each(image,function (index, item) {
         var regex = new RegExp("\\{\\{"+item+"\\}\\}","g");
 	var url = window.location.href;
 	var keyToFind = item;
@@ -26,13 +26,11 @@ $(document).ready(function () {
 	    localStorage.setItem(keyToFind, valueFound);
 	}		
         var currVal = localStorage.getItem(item);
-        console.log(currVal)
         var currVal = (currVal !=null) ? currVal : "finances";
         var src1= "https://raw.githubusercontent.com/SamPutnam/Index-2019/master/";
         var src3= ".png";	
 	var bth = src1.concat(currVal);
         var fll = bth.concat(src3);
-        console.log(fll);
         var input = document.getElementById(item);
         input.src = fll;
     });
@@ -41,7 +39,7 @@ $(document).ready(function () {
 <script>
 $(document).ready(function () {
     var video = ["video"];
-    $.each(names,function (index, item) {
+    $.each(video,function (index, item) {
         var regex = new RegExp("\\{\\{"+item+"\\}\\}","g");
 	var url = window.location.href;
 	var keyToFind = item;
@@ -51,13 +49,11 @@ $(document).ready(function () {
 	    localStorage.setItem(keyToFind, valueFound);
 	}		
         var currVal = localStorage.getItem(item);
-        console.log(currVal)
         var currVal = (currVal !=null) ? currVal : "FIXD_2_Min_FEMALE";
         var src1= "https://s3.amazonaws.com/giddyup.io/";
         var src3= ".mp4";	
 	var bth = src1.concat(currVal);
         var fll = bth.concat(src3);
-        console.log(fll);
 	var input = document.getElementById('video');
 	input.src = fll
     });
@@ -65,8 +61,9 @@ $(document).ready(function () {
 </script>
 <script>
 $(document).ready(function () {
-    var demo = ["country", "age"];
-    $.each(names,function (index, item) {
+    var demo = ["country", "age", "countrylow"];
+    var set = false;
+    $.each(demo,function (index, item) {
         var regex = new RegExp("\\{\\{"+item+"\\}\\}","g");
 	var url = window.location.href;
 	var keyToFind = item;
@@ -76,8 +73,14 @@ $(document).ready(function () {
 	    var valueFound = url.substr(url.indexOf(keyToFind + '=') + keyToFind.length + 1).split('&')[0];
 	    localStorage.setItem(keyToFind, valueFound);
 	}		
-        var currVal = localStorage.getItem(item);
+        var currVal = localStorage.getItem(item);    
         console.log(currVal)
+	console.log(set)
+        if (set == false) {
+        set = true;
+        demo[2] = localStorage.getItem(item).toLowerCase();
+	console.log(demo)
+        }
         var currVal = (currVal !=null) ? currVal : "";
 	$(".dynamic:contains('{{"+item+"}}')").each(function() {
             var replace_text = currVal
@@ -123,9 +126,9 @@ $(document).ready(function () {
             
             </a>
           </p>
-          <p><span class="text-uppercase"> </span> — New policies are indicating that for years many   drivers have likely overpaid on their car insurance.
+          <p class="dynamic"><span class="text-uppercase"> </span> — New policies are indicating that for years many {{countrylow}} drivers have likely overpaid on their car insurance.
           </p>
-          <p>The simple truth is most drivers don't know this.
+          <p class="dynamic">The simple truth is most {{countrylow}} drivers don't know this.
           </p>
           <p class="dynamic">
             Did you know, <strong>you could save as much as $536/year on your auto insurance by simply checking online?</strong> Additionally, if you're over {{age}} you could get even higher discounts. Has your insurance agent ever
