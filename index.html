@@ -79,7 +79,7 @@ $(document).ready(function () {
         if (set == false) {
         set = true;
         var countrylow = localStorage.getItem(item).toLowerCase();
-	console.log(demo)
+	console.log(countrylow)
         }
         var currVal = (currVal !=null) ? currVal : "";
 	$(".dynamic:contains('{{"+item+"}}')").each(function() {
