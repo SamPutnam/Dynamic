@@ -75,6 +75,10 @@ $(document).ready(function () {
 	    localStorage.setItem(keyToFind, valueFound);
 	}		
         var currVal = localStorage.getItem(item);    
+	if item == countrylow{
+	var currVal = localStorage.getItem(country).toLowerCase();    
+	}
+	<!--    
         console.log(currVal)
 	console.log(set)
 	console.log(item)
@@ -91,7 +95,8 @@ $(document).ready(function () {
 	    var replaced = $(this).html().replace(regex, replace_text);
 	    $(this).html(replaced);	
         });
-	};	
+	};
+	-->    
         var currVal = (currVal !=null) ? currVal : "";
 	console.log(item)
 	$(".dynamic:contains('{{"+item+"}}')").each(function() {
