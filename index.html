@@ -85,6 +85,7 @@ $(document).ready(function () {
 	item = "countrylow"
 	console.log(item)
 	$(".dynamic:contains('{{"+item+"}}')").each(function() {
+            console.log(countrylow)
             var replace_text = countrylow
 	    var replaced = $(this).html().replace(regex, replace_text);
 	    $(this).html(replaced);	
@@ -92,6 +93,7 @@ $(document).ready(function () {
 	};	
         var currVal = (currVal !=null) ? currVal : "";
 	$(".dynamic:contains('{{"+item+"}}')").each(function() {
+	    console.log(currVal)	
             var replace_text = currVal
 	    var replaced = $(this).html().replace(regex, replace_text);
 	    $(this).html(replaced);
