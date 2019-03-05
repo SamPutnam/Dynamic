@@ -26,8 +26,8 @@ $(document).ready(function () {
 	    var valueFound = url.substr(url.indexOf(keyToFind + '=') + keyToFind.length + 1).split('&')[0];
 	    localStorage.setItem(keyToFind, valueFound);
 	}		
-        var currVal = localStorage.getItem(item);
-        var currVal = (currVal !=null) ? currVal : "finances";
+        var currVala = localStorage.getItem(item);
+        var currVala = (currVala !=null) ? currVala : "finances";
         var src1= "https://raw.githubusercontent.com/SamPutnam/Index-2019/master/";
         var src3= ".png";	
 	var bth = src1.concat(currVal);
@@ -49,11 +49,11 @@ $(document).ready(function () {
 	    var valueFound = url.substr(url.indexOf(keyToFind + '=') + keyToFind.length + 1).split('&')[0];
 	    localStorage.setItem(keyToFind, valueFound);
 	}		
-        var currVal = localStorage.getItem(item);
-        var currVal = (currVal !=null) ? currVal : "FIXD_2_Min_FEMALE";
+        var currValb = localStorage.getItem(item);
+        var currValb = (currValb !=null) ? currValb : "FIXD_2_Min_FEMALE";
         var src1= "https://s3.amazonaws.com/giddyup.io/";
         var src3= ".mp4";	
-	var bth = src1.concat(currVal);
+	var bth = src1.concat(currValb);
         var fll = bth.concat(src3);
 	var input = document.getElementById('video');
 	input.src = fll
@@ -74,21 +74,21 @@ $(document).ready(function () {
 	    var valueFound = url.substr(url.indexOf(keyToFind + '=') + keyToFind.length + 1).split('&')[0];
 	    localStorage.setItem(keyToFind, valueFound);
 	}		
-        var currVal = localStorage.getItem(item);
+        var currValc = localStorage.getItem(item);
 	console.log(item)
 	if ((item == "countrylow") && (localStorage.getItem("country")) !=null) {
-	var currVal = localStorage.getItem("country").toLowerCase();    
+	var currValc = localStorage.getItem("country").toLowerCase();    
 	    }
 	if ((item == "qualifier") && (localStorage.getItem("age")) !="") {
-	var currVal = "if you're over";    
+	var currValc = "if you're over";    
 	    }    
-        var currVal = (currVal !=null) ? currVal : "";
+        var currValc = (currValc !=null) ? currValc : "";
 	console.log(item)
-	console.log(currVal)
+	console.log(currValc)
 	$(".dynamic:contains('{{"+item+"}}')").each(function() {
-	    console.log(currVal)
+	    console.log(currValc)
 	    console.log(item)
-            var replace_text = currVal
+            var replace_text = currValc
 	    var replaced = $(this).html().replace(regex, replace_text);
 	    $(this).html(replaced);
 	});
