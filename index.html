@@ -100,18 +100,6 @@ $(document).ready(function () {
     });
 });	
 </script>
-<script>
-var objToday = new Date(),
-	weekday = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'),
-	dayOfWeek = weekday[objToday.getDay()],
-	domEnder = function() { var a = objToday; if (/1/.test(parseInt((a + "").charAt(0)))) return "th"; a = parseInt((a + "").charAt(1)); return 1 == a ? "st" : 2 == a ? "nd" : 3 == a ? "rd" : "th" }(),
-	dayOfMonth = today + ( objToday.getDate() < 10) ? '0' + objToday.getDate() + domEnder : objToday.getDate() + domEnder,
-	months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'),
-	curMonth = months[objToday.getMonth()],
-	curYear = objToday.getFullYear();
-var today = dayOfWeek + ", " + curMonth + " " +  dayOfMonth + " " + curYear;
-document.getElementById("date").innerHTML = today;	
-</script>
 </head>
 <body>
     <div class="navbar">
@@ -150,7 +138,7 @@ document.getElementById("date").innerHTML = today;
           </p>
           <p class="dynamic"><span class="text-uppercase"> </span> — New policies are indicating that for years many {{countrylow}} drivers have likely overpaid on their car insurance.
           </p>
-          <p class="dynamic"> <span id="date">today</span>The simple truth is most {{countrylow}} drivers don't know this.
+          <p class="dynamic">The simple truth is most {{countrylow}} drivers don't know this.
           </p>
           <p class="dynamic">
             Did you know, <strong>you could save as much as $536/year on your auto insurance by simply checking online?</strong> Additionally, {{qualifier}} {{age}} you could get even higher discounts. Has your insurance agent ever
